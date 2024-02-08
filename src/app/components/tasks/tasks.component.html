@@ -1,0 +1,16 @@
+<app-add-task (submitTask)="addNewTask($event)"></app-add-task>
+
+<div class="items">
+
+      <app-task-item *ngFor="let ts of tasksData" 
+      [task]="ts"
+      (onDelete)="deleteTask(ts)"
+      (onToggle) = "toggleReminder(ts)"
+      >
+      
+      </app-task-item>
+    
+
+</div>
+
+<a routerLink="/about">About Page</a>
